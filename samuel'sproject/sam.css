@@ -16,7 +16,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
-  color: #353535;
+  color: blue;
 }
 
 h1, h2, h3, h4, h5 {
@@ -373,7 +373,7 @@ header nav ul li a {
 }
 
 .membership-cards-box {
-  background: #233EDE;
+  background:#233EDE;
   padding: 1.5rem;
 }
 
@@ -386,7 +386,7 @@ header nav ul li a {
 .membership-cards-box h2 {
   font-size: 4.5rem;
   font-weight: 700;
-  color: #233EDE;
+  columns:#233EDE;
   line-height: 1;
 }
 
@@ -422,7 +422,7 @@ header nav ul li a {
 
 /* start: footer section styles */
 footer {
-  background: url('Images/thumb1.jpg') top center no-repeat;
+  background: url('Images/thumb12.jpg') top center no-repeat;
   background-size: cover;
   padding-bottom: 2rem;
 }
