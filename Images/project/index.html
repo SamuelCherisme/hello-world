@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lapis, Papyrus, Scalpellus</title>
+  <link rel = "stylesheet"
+   type = "text/css"
+   href = "rpsStyle.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+   <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-train-station.css">
+</head>
+
+<body onload="typeWriter()">
+    <img src="https://i.postimg.cc/28KsFJwM/rps-banner.png" id="banner" alt="Rock paper scissors banner">
+    <div class="odometer-div">
+        <div id="odometerComputer" class="odometer">0</div>
+        <div class="small-divider"></div>
+        <div id="odometerPlayer" class="odometer">0</div>
+        <br>
+        <label for="odometerComputer">C</label>
+        <div class="large-divider"></div>
+        <label for="odometerPlayer">P<label>
+    </div>
+    <div style="text-align: center">
+        <h1 class="animated tada slow delay-1s">Lapis, Papyrus, Scalpellus</h1>
+        <h2 id="instructions"></h2>
+        <br>
+        <button id="rock" onclick="takePlayerChoice('lapis')">Lapis</button>
+        <div class="small-divider"></div>
+        <button id="paper" onclick="takePlayerChoice('papyrus')">Papyrus</button>
+        <div class="small-divider"></div>
+        <button id="scissors" onclick="takePlayerChoice('scalpellus')">Scalpellus</button>
+        <br>
+        <br>
+    </div>
+    <script>
+        var i = 0;
+        var txt = "Welcome to the ancient game of Lapis, Papyrus, Scalpellus.\nPlay against the computer by making a choice below. \nGood luck!";
+        var speed = 30;
+        
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("instructions").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        function sendAlert(titleMessage, outcomeMessage, popupType, buttonColor, confirmButtonText) {
+            Swal.fire({
+                title: titleMessage,
+                text: outcomeMessage,
+                type: popupType,
+                showCancelButton: false,
+                confirmButtonColor: buttonColor,
+                confirmButtonText: confirmButtonText
+            })
+        }
+    </script>
+    <script type="text/javascript" src="rockPaperScissors.js"></script>
+    <script type="text/javascript" src="http://github.hubspot.com/odometer/odometer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+</html>

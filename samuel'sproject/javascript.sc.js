@@ -80,4 +80,10 @@ function createNewItem() {
 flex.innerHTML += "Something new";
 }
 */
+console.log('Hello'+'World' );
+console.log( 22 * 33)
+console.log('Hello' + 'World');
+
+//var function name(params) {
+    
 
